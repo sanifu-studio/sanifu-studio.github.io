@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sanifu — ผลงาน | วิดีโอ · กราฟิก · ข้อมูล</title>
+<meta name="description" content="พอร์ตโฟลิโอ Sanifu: คลิปรีวิวลูกค้า ซับไทยฝังคลิป Motion Graphics อินโฟกราฟิก และ Company Profile — จ้างงานผ่าน Fastwork">
+<meta property="og:title" content="Sanifu — ผลงาน">
+<meta property="og:description" content="วิดีโอ · กราฟิก · ข้อมูล — ดูตัวอย่างงานจริงทุกบริการ">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&family=Prompt:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0e1116; --panel:#161b23; --panel2:#1d242f; --line:#2a3342;
+    --text:#e8edf4; --muted:#9aa7b8; --accent:#3fb6a8; --accent2:#f5b942;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--text);font-family:'IBM Plex Sans Thai',system-ui,sans-serif;line-height:1.65}
+  h1,h2,h3,.logo{font-family:'Prompt','IBM Plex Sans Thai',sans-serif}
+  a{color:inherit;text-decoration:none}
+  img,video{max-width:100%;display:block}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+
+  header{position:sticky;top:0;z-index:50;background:rgba(14,17,22,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;gap:18px;padding:14px 0;flex-wrap:wrap}
+  .logo{font-weight:800;font-size:1.25rem;letter-spacing:.5px}
+  .logo span{color:var(--accent)}
+  .nav .links{display:flex;gap:14px;flex-wrap:wrap;font-size:.86rem;color:var(--muted)}
+  .nav .links a:hover{color:var(--text)}
+  .nav .cta{margin-left:auto}
+
+  .btn{display:inline-block;padding:10px 20px;border-radius:10px;font-weight:600;font-size:.92rem;transition:.15s}
+  .btn-primary{background:var(--accent);color:#07211e}
+  .btn-primary:hover{filter:brightness(1.1)}
+  .btn-ghost{border:1px solid var(--line);color:var(--text)}
+  .btn-ghost:hover{border-color:var(--accent);color:var(--accent)}
+
+  .hero{padding:72px 0 56px;text-align:left}
+  .hero h1{font-size:clamp(1.7rem,4.6vw,2.7rem);font-weight:800;line-height:1.25}
+  .hero h1 em{font-style:normal;color:var(--accent)}
+  .hero p{margin-top:16px;max-width:640px;color:var(--muted);font-size:1.02rem}
+  .hero .actions{margin-top:26px;display:flex;gap:12px;flex-wrap:wrap}
+  .chips{margin-top:30px;display:flex;gap:8px;flex-wrap:wrap}
+  .chip{font-size:.8rem;color:var(--muted);border:1px solid var(--line);border-radius:99px;padding:5px 13px}
+
+  section{padding:56px 0;border-top:1px solid var(--line)}
+  .sec-head{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:8px}
+  .sec-head .no{font-family:'Prompt';color:var(--accent2);font-weight:700;font-size:.95rem}
+  h2{font-size:clamp(1.25rem,3vw,1.7rem);font-weight:700}
+  .sec-desc{color:var(--muted);max-width:680px;margin-bottom:26px;font-size:.95rem}
+  .sec-cta{margin-top:26px}
+
+  .vid-row{display:flex;gap:26px;flex-wrap:wrap;align-items:flex-start}
+  .phone{flex:0 0 300px;max-width:300px;border-radius:22px;overflow:hidden;border:1px solid var(--line);background:#000;box-shadow:0 18px 50px rgba(0,0,0,.45)}
+  .phone video{aspect-ratio:9/16;object-fit:cover;width:100%}
+  .vid-notes{flex:1;min-width:260px}
+  .vid-notes ul{list-style:none;display:grid;gap:12px}
+  .vid-notes li{padding-left:26px;position:relative;color:var(--muted);font-size:.95rem}
+  .vid-notes li::before{content:"✓";position:absolute;left:0;color:var(--accent);font-weight:700}
+  .vid-notes li strong{color:var(--text);font-weight:600}
+
+  .grid{display:grid;gap:14px}
+  .grid.cols3{grid-template-columns:repeat(auto-fill,minmax(250px,1fr))}
+  .grid.cols2{grid-template-columns:repeat(auto-fill,minmax(320px,1fr))}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden;transition:.15s}
+  .card:hover{border-color:var(--accent);transform:translateY(-2px)}
+  .card img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:top}
+  .card.wide img{aspect-ratio:16/10}
+  .card .cap{padding:10px 14px;font-size:.84rem;color:var(--muted)}
+
+  .mood{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px}
+  .mood a{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px;transition:.15s;display:block}
+  .mood a:hover{border-color:var(--accent);transform:translateY(-2px)}
+  .sw{display:flex;height:44px;border-radius:8px;overflow:hidden;margin-bottom:12px}
+  .sw i{flex:1}
+  .mood h3{font-size:.95rem;font-weight:600}
+  .mood p{font-size:.78rem;color:var(--muted);margin-top:4px}
+
+  .note{margin-top:22px;font-size:.8rem;color:var(--muted);border-left:3px solid var(--line);padding-left:12px}
+
+  footer{border-top:1px solid var(--line);padding:48px 0 60px;text-align:center}
+  footer .logo{font-size:1.4rem}
+  footer p{color:var(--muted);margin-top:10px;font-size:.9rem}
+  footer .actions{margin-top:22px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <div class="logo">SANI<span>FU</span></div>
+    <nav class="links">
+      <a href="#reviewclip">คลิปรีวิว</a>
+      <a href="#subtitle">ซับไทย</a>
+      <a href="#motion">Motion</a>
+      <a href="#infographic">อินโฟกราฟิก</a>
+      <a href="#presentation">Presentation</a>
+      <a href="#moodboard">Mood Board</a>
+    </nav>
+    <div class="cta"><a class="btn btn-primary" href="https://fastwork.co/user/709jqv5b" target="_blank" rel="noopener">จ้างผ่าน Fastwork</a></div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <div class="hero">
+    <h1>เปลี่ยนข้อมูลและเรื่องราวของธุรกิจคุณ<br>ให้เป็น<em>สื่อที่คนหยุดดู</em></h1>
+    <p>Sanifu ผลิตวิดีโอสั้น ซับไตเติล motion graphics อินโฟกราฟิก และเอกสารธุรกิจ
+       — เน้นงานที่มีข้อมูลแน่นแต่ต้องอ่านรู้เรื่องใน 10 วินาที ส่งเร็ว ตรวจทานทุกชิ้นก่อนส่งมอบ</p>
+    <div class="actions">
+      <a class="btn btn-primary" href="https://fastwork.co/user/709jqv5b" target="_blank" rel="noopener">ดูบริการทั้งหมดบน Fastwork</a>
+      <a class="btn btn-ghost" href="#reviewclip">ดูตัวอย่างผลงาน ↓</a>
+    </div>
+    <div class="chips">
+      <span class="chip">คลิปสั้น TikTok / Reels</span>
+      <span class="chip">ซับไทยเด้งตามคำ</span>
+      <span class="chip">Motion Graphics</span>
+      <span class="chip">อินโฟกราฟิก</span>
+      <span class="chip">Company Profile / Pitch Deck</span>
+    </div>
+  </div>
+
+  <section id="reviewclip">
+    <div class="sec-head"><span class="no">01</span><h2>คลิปรีวิวลูกค้า — จากสกรีนช็อตแชท เป็นคลิปขายของ</h2></div>
+    <p class="sec-desc">ร้านค้าส่วนใหญ่มีคำชมลูกค้ากองอยู่ในแชทแต่ไม่เคยถูกใช้ต่อ
+       เรารับแปลงสกรีนช็อตรีวิวเป็นคลิปสั้นตรงจังหวะเพลง พร้อมเบลอชื่อ-หน้าลูกค้าให้ถ้ายังไม่ได้รับอนุญาต</p>
+    <div class="vid-row">
+      <div class="phone"><video src="assets/reviewclip_demo.mp4" controls preload="metadata" playsinline></video></div>
+      <div class="vid-notes">
+        <ul>
+          <li><strong>คัตตรงจังหวะเพลง</strong> — เปลี่ยนภาพลงบีต ดูมีของแม้วัตถุดิบเป็นภาพนิ่ง</li>
+          <li><strong>ข้อความเด็ดถูกดึงขึ้นตัวใหญ่</strong> — คนดูจับใจความได้โดยไม่ต้องเปิดเสียง</li>
+          <li><strong>คุมโซนปลอดภัย TikTok</strong> — ไม่มีข้อความโดน UI บัง</li>
+          <li><strong>จบด้วยการ์ดชื่อร้าน</strong> — พร้อมใช้ยิงแอดต่อได้ทันที</li>
+        </ul>
+        <div class="sec-cta"><a class="btn btn-ghost" href="https://fastwork.co/user/709jqv5b/video-editing-64517126" target="_blank" rel="noopener">ดูแพ็กเกจงานคลิปรีวิว →</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="subtitle">
+    <div class="sec-head"><span class="no">02</span><h2>ซับไทยฝังในคลิป — เด้งตามคำ วรรณยุกต์ไม่เพี้ยน</h2></div>
+    <p class="sec-desc">ซับตามเสียงพูดแบบ word-pop เน้นคำสำคัญด้วยสี ตรวจทวนทุกบรรทัดด้วยคน
+       แถมไฟล์ .srt ให้เอาไปใช้ต่อทุกแพลตฟอร์ม</p>
+    <div class="vid-row">
+      <div class="phone"><video src="assets/subtitle_sample.mp4" controls preload="metadata" playsinline></video></div>
+      <div class="vid-notes">
+        <ul>
+          <li><strong>ซับเด้งตามคำที่กำลังพูด</strong> — ไม่ใช่ยกประโยคขึ้นทีเดียว</li>
+          <li><strong>วรรณยุกต์และสระไทยถูกตำแหน่งทุกตัว</strong> — จุดที่เครื่องมือสำเร็จรูปมักพลาด</li>
+          <li><strong>หนึ่งบรรทัดจบหนึ่งช่วงพูด</strong> — ไม่ตัดคำค้างท้ายบรรทัด</li>
+          <li><strong>ได้ทั้งคลิปฝังซับ + ไฟล์ .srt</strong></li>
+        </ul>
+        <div class="sec-cta"><a class="btn btn-ghost" href="https://fastwork.co/user/709jqv5b/subtitle-80531421" target="_blank" rel="noopener">ดูแพ็กเกจงานซับไทย →</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="motion">
+    <div class="sec-head"><span class="no">03</span><h2>Motion Graphics — อธิบายสินค้าและข้อมูลให้จบในคลิปเดียว</h2></div>
+    <p class="sec-desc">explainer ภาพวาดเวกเตอร์เล่าเรื่อง พร้อมเสียงบรรยายและซับ
+       เหมาะกับสินค้า/บริการที่ต้องอธิบาย และเนื้อหาที่มีตัวเลขหรือขั้นตอน</p>
+    <div class="vid-row">
+      <div class="phone"><video src="assets/motion_tuen.mp4" controls preload="metadata" playsinline></video></div>
+      <div class="vid-notes">
+        <ul>
+          <li><strong>ตัวละคร/ฉากวาดใหม่ตามแบรนด์</strong> — ไม่ใช่เทมเพลตสำเร็จรูป</li>
+          <li><strong>เสียงบรรยายไทย + ซับ</strong> — ดูรู้เรื่องทั้งเปิดและปิดเสียง</li>
+          <li><strong>ได้ทั้งแนวตั้ง 9:16 และแนวนอน 16:9</strong></li>
+          <li><strong>สตอรี่บอร์ดให้ดูก่อนผลิตจริง</strong></li>
+        </ul>
+        <div class="sec-cta"><a class="btn btn-ghost" href="https://fastwork.co/user/709jqv5b/motion-graphics-13750849" target="_blank" rel="noopener">ดูแพ็กเกจงาน Motion →</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="infographic">
+    <div class="sec-head"><span class="no">04</span><h2>อินโฟกราฟิก — ข้อมูลแน่น อ่านรู้เรื่อง</h2></div>
+    <p class="sec-desc">ย่อยข้อมูลยาว ๆ ให้จบในภาพเดียว สำหรับธุรกิจ หน่วยงาน โรงเรียน และเพจ
+       ทุกแพ็กเกจแถมไฟล์เวกเตอร์แก้ไขได้</p>
+    <div class="grid cols3">
+      <a class="card" href="assets/info_01.png" target="_blank"><img src="assets/info_01.png" alt="อินโฟกราฟิกกระบวนการผลิตกาแฟ" loading="lazy"><div class="cap">กระบวนการผลิต — ร้านกาแฟคั่วเอง</div></a>
+      <a class="card" href="assets/info_02.png" target="_blank"><img src="assets/info_02.png" alt="อินโฟกราฟิกระบบนัดหมายคลินิก" loading="lazy"><div class="cap">ระบบนัดหมาย — คลินิก</div></a>
+      <a class="card" href="assets/info_03.png" target="_blank"><img src="assets/info_03.png" alt="อินโฟกราฟิกบ้านประหยัดไฟ 5 จุด" loading="lazy"><div class="cap">ประหยัดไฟในบ้าน 5 จุด</div></a>
+      <a class="card" href="assets/info_04.png" target="_blank"><img src="assets/info_04.png" alt="อินโฟกราฟิกเปรียบเทียบช่องทางขาย" loading="lazy"><div class="cap">เทียบช่องทางขาย — ธุรกิจอาหาร</div></a>
+      <a class="card" href="assets/info_05.png" target="_blank"><img src="assets/info_05.png" alt="อินโฟกราฟิกอ่านฉลากโภชนาการ" loading="lazy"><div class="cap">อ่านฉลากโภชนาการใน 4 บรรทัด</div></a>
+      <a class="card" href="assets/info_06.png" target="_blank"><img src="assets/info_06.png" alt="อินโฟกราฟิกอธิบายสินค้าผ้าฝ้าย" loading="lazy"><div class="cap">อธิบายสินค้า — แบรนด์ผ้าฝ้าย</div></a>
+    </div>
+    <div class="sec-cta"><a class="btn btn-ghost" href="https://fastwork.co/user/709jqv5b/infographics-10463361" target="_blank" rel="noopener">ดูแพ็กเกจงานอินโฟกราฟิก →</a></div>
+  </section>
+
+  <section id="presentation">
+    <div class="sec-head"><span class="no">05</span><h2>Company Profile / Pitch Deck — ให้ตัวเลขของคุณเล่าเรื่องได้</h2></div>
+    <p class="sec-desc">เอกสารธุรกิจที่ข้อมูลเยอะมักจบที่สไลด์อ่านไม่รู้เรื่อง
+       เราออกแบบกราฟและไดอะแกรมใหม่ให้อ่านจบเร็ว เหมาะกับงานยื่นลูกค้า ยื่นแบงก์ และพรีเซนต์ผู้บริหาร</p>
+    <div class="grid cols2">
+      <a class="card wide" href="assets/set1_siam_metalworks.png" target="_blank"><img src="assets/set1_siam_metalworks.png" alt="Company profile โรงงานโลหะ" loading="lazy"><div class="cap">Company Profile — โรงงานอุตสาหกรรม</div></a>
+      <a class="card wide" href="assets/set3_pitchdeck.png" target="_blank"><img src="assets/set3_pitchdeck.png" alt="Pitch deck" loading="lazy"><div class="cap">Pitch Deck — ตารางเทียบคู่แข่ง</div></a>
+      <a class="card wide" href="assets/set2_clinic.png" target="_blank"><img src="assets/set2_clinic.png" alt="โปรไฟล์คลินิก" loading="lazy"><div class="cap">โปรไฟล์ธุรกิจบริการ — คลินิก</div></a>
+      <a class="card wide" href="assets/set4_fnb.png" target="_blank"><img src="assets/set4_fnb.png" alt="สไลด์ธุรกิจอาหาร" loading="lazy"><div class="cap">กราฟการเติบโต — ธุรกิจอาหาร</div></a>
+    </div>
+    <div class="sec-cta"><a class="btn btn-ghost" href="https://fastwork.co/user/709jqv5b/presentation-32208593" target="_blank" rel="noopener">ดูแพ็กเกจงาน Presentation →</a></div>
+  </section>
+
+  <section id="moodboard">
+    <div class="sec-head"><span class="no">06</span><h2>Mood Board / Design Direction</h2></div>
+    <p class="sec-desc">บอร์ดกำหนดทิศทางดีไซน์ก่อนเริ่มโปรดักชัน — สวอตช์สี ฟอนต์ เท็กซ์เจอร์ และอารมณ์ภาพ
+       คลิกเพื่อเปิดดูบอร์ดจริงแบบเต็มหน้า</p>
+    <div class="mood">
+      <a href="https://claude.ai/code/artifact/896bef5f-24bf-412a-9e7c-519f7307528f" target="_blank" rel="noopener">
+        <div class="sw"><i style="background:#d4a017"></i><i style="background:#c1440e"></i><i style="background:#708238"></i><i style="background:#2e8b8b"></i></div>
+        <h3>Mid-Century Modern</h3><p>design reference board · ลาย atomic starburst</p>
+      </a>
+      <a href="https://claude.ai/code/artifact/26a755a5-2d8b-4660-bfc7-5dcfdd4e6d53" target="_blank" rel="noopener">
+        <div class="sw"><i style="background:#3a3f47"></i><i style="background:#19b6c9"></i><i style="background:#d9c18a"></i><i style="background:#12151a"></i></div>
+        <h3>Showman Engineer</h3><p>design reference board · HUD + ลายวงจร</p>
+      </a>
+      <a href="https://claude.ai/code/artifact/80817e1d-dc30-4953-9806-f36e97863781" target="_blank" rel="noopener">
+        <div class="sw"><i style="background:#e8e6e1"></i><i style="background:#1f6f8b"></i><i style="background:#5b6670"></i><i style="background:#708238"></i></div>
+        <h3>Athena</h3><p>design reference board · หินอ่อน + ลาย meander</p>
+      </a>
+      <a href="https://claude.ai/code/artifact/718ddc78-4b16-40a2-8fa8-8d22cf64fb4a" target="_blank" rel="noopener">
+        <div class="sw"><i style="background:#5b2a86"></i><i style="background:#a4161a"></i><i style="background:#d4af37"></i><i style="background:#1b1b1e"></i></div>
+        <h3>Julius Caesar</h3><p>design reference board · ลอเรล + อินทรี</p>
+      </a>
+      <a href="https://claude.ai/code/artifact/f0db7fd8-f31f-4e15-8e82-a06a6a14879e" target="_blank" rel="noopener">
+        <div class="sw"><i style="background:#111"></i><i style="background:#333"></i><i style="background:#e8e6e1"></i><i style="background:#a4161a"></i></div>
+        <h3>Caesar Collage</h3><p>inspiration collage · 13 ภาพซ้อนเล่าอารมณ์</p>
+      </a>
+    </div>
+  </section>
+
+  <p class="note">ตัวอย่างผลงานในหน้านี้ผลิตขึ้นเองทั้งหมดเพื่อการสาธิต ชื่อแบรนด์ที่ปรากฏเป็นแบรนด์สมมติ ไม่ใช่งานของลูกค้ารายใด ยกเว้นที่ระบุไว้เป็นอย่างอื่น</p>
+
+</main>
+
+<footer>
+  <div class="logo">SANI<span style="color:var(--accent)">FU</span></div>
+  <p>รับงานและชำระเงินผ่าน Fastwork เท่านั้น — เงินของคุณได้รับความคุ้มครองจนกว่างานจะเสร็จ</p>
+  <div class="actions"><a class="btn btn-primary" href="https://fastwork.co/user/709jqv5b" target="_blank" rel="noopener">ดูบริการทั้งหมดบน Fastwork</a></div>
+</footer>
+
+</body>
+</html>
