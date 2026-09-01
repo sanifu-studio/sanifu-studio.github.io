@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Sanifu — ผลงาน | วิดีโอ · กราฟิก · ข้อมูล</title>
-<meta name="description" content="พอร์ตโฟลิโอ Sanifu: คลิปรีวิวลูกค้า ซับไทยฝังคลิป Motion Graphics อินโฟกราฟิก และ Company Profile — จ้างงานผ่าน Fastwork">
-<meta property="og:title" content="Sanifu — ผลงาน">
-<meta property="og:description" content="วิดีโอ · กราฟิก · ข้อมูล — ดูตัวอย่างงานจริงทุกบริการ">
+<title>Sanifu — วิเคราะห์ธุรกิจ · เอกสาร · วิดีโอ</title>
+<meta name="description" content="พอร์ตโฟลิโอ Sanifu: วิเคราะห์ข้อมูลธุรกิจ Company Profile / Pitch Deck อินโฟกราฟิก Motion Graphics คลิปสั้นและซับไทย — ผลิตด้วยระบบ AI ตรวจทุกชิ้นด้วยคน จ้างผ่าน Fastwork">
+<meta property="og:title" content="Sanifu — วิเคราะห์ธุรกิจ · เอกสาร · วิดีโอ">
+<meta property="og:description" content="คิดแบบที่ปรึกษา ผลิตด้วยระบบ AI ตรวจทุกชิ้นด้วยคน — ดูตัวอย่างงานจริงทุกบริการ">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&family=Prompt:wght@600;700;800&display=swap" rel="stylesheet">
@@ -31,18 +31,22 @@
   .nav .links a:hover{color:var(--text)}
   .nav .cta{margin-left:auto}
 
-  .btn{display:inline-block;padding:10px 20px;border-radius:10px;font-weight:600;font-size:.92rem;transition:.15s}
+  .btn{display:inline-block;padding:10px 20px;border-radius:10px;font-weight:600;font-size:.92rem;transition:.15s;border:0;cursor:pointer}
   .btn-primary{background:var(--accent);color:#07211e}
   .btn-primary:hover{filter:brightness(1.1)}
-  .btn-ghost{border:1px solid var(--line);color:var(--text)}
+  .btn-ghost{border:1px solid var(--line);color:var(--text);background:transparent}
   .btn-ghost:hover{border-color:var(--accent);color:var(--accent)}
 
-  .hero{padding:72px 0 56px;text-align:left}
+  .hero{padding:56px 0 40px;text-align:left}
   .hero h1{font-size:clamp(1.7rem,4.6vw,2.7rem);font-weight:800;line-height:1.25}
   .hero h1 em{font-style:normal;color:var(--accent)}
-  .hero p{margin-top:16px;max-width:640px;color:var(--muted);font-size:1.02rem}
+  .hero .sub{margin-top:16px;max-width:680px;color:var(--muted);font-size:1.02rem}
+  .hero .pillars{margin-top:20px;display:grid;gap:8px;max-width:680px}
+  .hero .pillars li{list-style:none;padding-left:26px;position:relative;color:var(--muted);font-size:.95rem}
+  .hero .pillars li::before{content:"✓";position:absolute;left:0;color:var(--accent);font-weight:700}
+  .hero .pillars li strong{color:var(--text);font-weight:600}
   .hero .actions{margin-top:26px;display:flex;gap:12px;flex-wrap:wrap}
-  .chips{margin-top:30px;display:flex;gap:8px;flex-wrap:wrap}
+  .chips{margin-top:26px;display:flex;gap:8px;flex-wrap:wrap}
   .chip{font-size:.8rem;color:var(--muted);border:1px solid var(--line);border-radius:99px;padding:5px 13px}
 
   section{padding:56px 0;border-top:1px solid var(--line)}
@@ -52,9 +56,21 @@
   .sec-desc{color:var(--muted);max-width:680px;margin-bottom:26px;font-size:.95rem}
   .sec-cta{margin-top:26px}
 
+  /* ผลงานเด่น — masonry */
+  #featured{padding-top:40px}
+  .feat{columns:3 250px;column-gap:14px}
+  .feat .fcard{break-inside:avoid;margin-bottom:14px;background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:block;transition:.15s}
+  .feat .fcard:hover{border-color:var(--accent);transform:translateY(-2px)}
+  .feat .fcard video{width:100%;aspect-ratio:9/16;object-fit:cover;background:#000}
+  .feat .fcard img{width:100%}
+  .feat .cap{padding:10px 14px;font-size:.82rem;color:var(--muted);display:flex;gap:8px;align-items:baseline}
+  .feat .tag{color:var(--accent);font-size:.72rem;font-weight:600;white-space:nowrap}
+
   .vid-row{display:flex;gap:26px;flex-wrap:wrap;align-items:flex-start}
-  .phone{flex:0 0 300px;max-width:300px;border-radius:22px;overflow:hidden;border:1px solid var(--line);background:#000;box-shadow:0 18px 50px rgba(0,0,0,.45)}
+  .phone{flex:0 0 300px;max-width:300px;border-radius:22px;overflow:hidden;border:1px solid var(--line);background:#000;box-shadow:0 18px 50px rgba(0,0,0,.45);position:relative}
   .phone video{aspect-ratio:9/16;object-fit:cover;width:100%}
+  .phone .pv-btn{position:absolute;left:50%;bottom:14px;transform:translateX(-50%);background:rgba(14,17,22,.85);border:1px solid var(--line);color:var(--text);font-size:.8rem;padding:7px 14px;border-radius:99px;cursor:pointer;backdrop-filter:blur(4px)}
+  .phone .pv-btn:hover{border-color:var(--accent);color:var(--accent)}
   .vid-notes{flex:1;min-width:260px}
   .vid-notes ul{list-style:none;display:grid;gap:12px}
   .vid-notes li{padding-left:26px;position:relative;color:var(--muted);font-size:.95rem}
@@ -84,6 +100,11 @@
   footer .logo{font-size:1.4rem}
   footer p{color:var(--muted);margin-top:10px;font-size:.9rem}
   footer .actions{margin-top:22px}
+
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto}
+    .card,.fcard,.mood a{transition:none}
+  }
 </style>
 </head>
 <body>
@@ -92,11 +113,12 @@
   <div class="wrap nav">
     <div class="logo">SANI<span>FU</span></div>
     <nav class="links">
+      <a href="#featured">ผลงานเด่น</a>
+      <a href="#presentation">Company Profile</a>
+      <a href="#infographic">อินโฟกราฟิก</a>
+      <a href="#motion">Motion</a>
       <a href="#reviewclip">คลิปรีวิว</a>
       <a href="#subtitle">ซับไทย</a>
-      <a href="#motion">Motion</a>
-      <a href="#infographic">อินโฟกราฟิก</a>
-      <a href="#presentation">Presentation</a>
       <a href="#moodboard">Mood Board</a>
     </nav>
     <div class="cta"><a class="btn btn-primary" href="https://fastwork.co/user/709jqv5b" target="_blank" rel="noopener">จ้างผ่าน Fastwork</a></div>
@@ -106,78 +128,57 @@
 <main class="wrap">
 
   <div class="hero">
-    <h1>เปลี่ยนข้อมูลและเรื่องราวของธุรกิจคุณ<br>ให้เป็น<em>สื่อที่คนหยุดดู</em></h1>
-    <p>Sanifu ผลิตวิดีโอสั้น ซับไตเติล motion graphics อินโฟกราฟิก และเอกสารธุรกิจ
-       — เน้นงานที่มีข้อมูลแน่นแต่ต้องอ่านรู้เรื่องใน 10 วินาที ส่งเร็ว ตรวจทานทุกชิ้นก่อนส่งมอบ</p>
+    <h1>เราวิเคราะห์ข้อมูลธุรกิจของคุณเองได้<br>แล้วเปลี่ยนมันเป็น<em>สื่อที่คนหยุดดู</em></h1>
+    <p class="sub">ตลาดนี้เต็มไปด้วยคนรับ "ตกแต่ง" ข้อมูลที่คุณส่งให้ — Sanifu ต่างตรงที่อ่านและวิเคราะห์ข้อมูลเองได้ก่อนลงมือออกแบบ</p>
+    <ul class="pillars">
+      <li><strong>คิดแบบที่ปรึกษา</strong> — พื้นฐานการเงิน + MRE ธรรมศาสตร์ · ตัวเลขทุกจุดตรวจย้อนกลับที่ต้นทางได้</li>
+      <li><strong>ผลิตด้วยระบบ AI ที่มีคนตรวจทุกชิ้น</strong> — เร็วและรับปริมาณแบบที่ฟรีแลนซ์เดี่ยวทำไม่ได้ โดยคุณภาพไม่หลุดมือคน</li>
+      <li><strong>ส่งมอบจบเป็นชิ้นงาน</strong> — เอกสาร สไลด์ วิดีโอ กราฟิก พร้อมใช้ทันที</li>
+    </ul>
     <div class="actions">
       <a class="btn btn-primary" href="https://fastwork.co/user/709jqv5b" target="_blank" rel="noopener">ดูบริการทั้งหมดบน Fastwork</a>
-      <a class="btn btn-ghost" href="#reviewclip">ดูตัวอย่างผลงาน ↓</a>
+      <a class="btn btn-ghost" href="#featured">ดูตัวอย่างผลงาน ↓</a>
     </div>
     <div class="chips">
-      <span class="chip">คลิปสั้น TikTok / Reels</span>
-      <span class="chip">ซับไทยเด้งตามคำ</span>
-      <span class="chip">Motion Graphics</span>
-      <span class="chip">อินโฟกราฟิก</span>
+      <span class="chip">วิเคราะห์ข้อมูลธุรกิจ</span>
       <span class="chip">Company Profile / Pitch Deck</span>
+      <span class="chip">อินโฟกราฟิก</span>
+      <span class="chip">Motion Graphics</span>
+      <span class="chip">คลิปสั้น + ซับไทย</span>
     </div>
   </div>
 
-  <section id="reviewclip">
-    <div class="sec-head"><span class="no">01</span><h2>คลิปรีวิวลูกค้า — จากสกรีนช็อตแชท เป็นคลิปขายของ</h2></div>
-    <p class="sec-desc">ร้านค้าส่วนใหญ่มีคำชมลูกค้ากองอยู่ในแชทแต่ไม่เคยถูกใช้ต่อ
-       เรารับแปลงสกรีนช็อตรีวิวเป็นคลิปสั้นตรงจังหวะเพลง พร้อมเบลอชื่อ-หน้าลูกค้าให้ถ้ายังไม่ได้รับอนุญาต</p>
-    <div class="vid-row">
-      <div class="phone"><video src="assets/reviewclip_demo.mp4" controls preload="metadata" playsinline></video></div>
-      <div class="vid-notes">
-        <ul>
-          <li><strong>คัตตรงจังหวะเพลง</strong> — เปลี่ยนภาพลงบีต ดูมีของแม้วัตถุดิบเป็นภาพนิ่ง</li>
-          <li><strong>ข้อความเด็ดถูกดึงขึ้นตัวใหญ่</strong> — คนดูจับใจความได้โดยไม่ต้องเปิดเสียง</li>
-          <li><strong>คุมโซนปลอดภัย TikTok</strong> — ไม่มีข้อความโดน UI บัง</li>
-          <li><strong>จบด้วยการ์ดชื่อร้าน</strong> — พร้อมใช้ยิงแอดต่อได้ทันที</li>
-        </ul>
-        <div class="sec-cta"><a class="btn btn-ghost" href="https://fastwork.co/user/709jqv5b/video-editing-64517126" target="_blank" rel="noopener">ดูแพ็กเกจงานคลิปรีวิว →</a></div>
-      </div>
+  <section id="featured">
+    <div class="sec-head"><span class="no">★</span><h2>ผลงานเด่น</h2></div>
+    <p class="sec-desc">ตัวอย่างจากทุกสายงาน — คลิปเล่นอัตโนมัติแบบไม่มีเสียง คลิกการ์ดเพื่อดูรายละเอียดบริการนั้น</p>
+    <div class="feat">
+      <a class="fcard" href="#motion"><video src="assets/motion_tuen_preview.mp4" autoplay muted loop playsinline></video><div class="cap"><span class="tag">MOTION</span>explainer ภาพวาดเวกเตอร์ + เสียงบรรยาย</div></a>
+      <a class="fcard" href="#presentation"><img src="assets/set1_siam_metalworks.png" alt="Company profile โรงงานโลหะ" loading="lazy"><div class="cap"><span class="tag">DOCS</span>Company Profile — โรงงานอุตสาหกรรม</div></a>
+      <a class="fcard" href="#infographic"><img src="assets/info_04.png" alt="อินโฟกราฟิกเปรียบเทียบช่องทางขาย" loading="lazy"><div class="cap"><span class="tag">INFO</span>เทียบช่องทางขาย — ธุรกิจอาหาร</div></a>
+      <a class="fcard" href="#reviewclip"><video src="assets/reviewclip_demo_preview.mp4" autoplay muted loop playsinline></video><div class="cap"><span class="tag">VIDEO</span>คลิปรีวิวลูกค้า ตัดตรงจังหวะเพลง</div></a>
+      <a class="fcard" href="#presentation"><img src="assets/set3_pitchdeck.png" alt="Pitch deck ตารางเทียบคู่แข่ง" loading="lazy"><div class="cap"><span class="tag">DOCS</span>Pitch Deck — ตารางเทียบคู่แข่ง</div></a>
+      <a class="fcard" href="#infographic"><img src="assets/info_01.png" alt="อินโฟกราฟิกกระบวนการผลิตกาแฟ" loading="lazy"><div class="cap"><span class="tag">INFO</span>กระบวนการผลิต — ร้านกาแฟคั่วเอง</div></a>
+      <a class="fcard" href="#subtitle"><video src="assets/subtitle_sample_preview.mp4" autoplay muted loop playsinline></video><div class="cap"><span class="tag">SUB</span>ซับไทยเด้งตามคำ วรรณยุกต์ไม่เพี้ยน</div></a>
+      <a class="fcard" href="#infographic"><img src="assets/info_mockup.png" alt="อินโฟกราฟิกแนวงานพิมพ์" loading="lazy"><div class="cap"><span class="tag">INFO</span>งานพิมพ์ A4 — ดีไซน์พร้อมโรงพิมพ์</div></a>
+      <a class="fcard" href="#presentation"><img src="assets/set4_fnb.png" alt="กราฟการเติบโตธุรกิจอาหาร" loading="lazy"><div class="cap"><span class="tag">DOCS</span>กราฟการเติบโต — ธุรกิจอาหาร</div></a>
     </div>
   </section>
 
-  <section id="subtitle">
-    <div class="sec-head"><span class="no">02</span><h2>ซับไทยฝังในคลิป — เด้งตามคำ วรรณยุกต์ไม่เพี้ยน</h2></div>
-    <p class="sec-desc">ซับตามเสียงพูดแบบ word-pop เน้นคำสำคัญด้วยสี ตรวจทวนทุกบรรทัดด้วยคน
-       แถมไฟล์ .srt ให้เอาไปใช้ต่อทุกแพลตฟอร์ม</p>
-    <div class="vid-row">
-      <div class="phone"><video src="assets/subtitle_sample.mp4" controls preload="metadata" playsinline></video></div>
-      <div class="vid-notes">
-        <ul>
-          <li><strong>ซับเด้งตามคำที่กำลังพูด</strong> — ไม่ใช่ยกประโยคขึ้นทีเดียว</li>
-          <li><strong>วรรณยุกต์และสระไทยถูกตำแหน่งทุกตัว</strong> — จุดที่เครื่องมือสำเร็จรูปมักพลาด</li>
-          <li><strong>หนึ่งบรรทัดจบหนึ่งช่วงพูด</strong> — ไม่ตัดคำค้างท้ายบรรทัด</li>
-          <li><strong>ได้ทั้งคลิปฝังซับ + ไฟล์ .srt</strong></li>
-        </ul>
-        <div class="sec-cta"><a class="btn btn-ghost" href="https://fastwork.co/user/709jqv5b/subtitle-80531421" target="_blank" rel="noopener">ดูแพ็กเกจงานซับไทย →</a></div>
-      </div>
+  <section id="presentation">
+    <div class="sec-head"><span class="no">01</span><h2>Company Profile / Pitch Deck — ให้ตัวเลขของคุณเล่าเรื่องได้</h2></div>
+    <p class="sec-desc">เอกสารธุรกิจที่ข้อมูลเยอะมักจบที่สไลด์อ่านไม่รู้เรื่อง
+       เราอ่านข้อมูลต้นทางเองได้ ออกแบบกราฟและไดอะแกรมใหม่ให้อ่านจบเร็ว เหมาะกับงานยื่นลูกค้า ยื่นแบงก์ และพรีเซนต์ผู้บริหาร</p>
+    <div class="grid cols2">
+      <a class="card wide" href="assets/set1_siam_metalworks.png" target="_blank"><img src="assets/set1_siam_metalworks.png" alt="Company profile โรงงานโลหะ" loading="lazy"><div class="cap">Company Profile — โรงงานอุตสาหกรรม</div></a>
+      <a class="card wide" href="assets/set3_pitchdeck.png" target="_blank"><img src="assets/set3_pitchdeck.png" alt="Pitch deck" loading="lazy"><div class="cap">Pitch Deck — ตารางเทียบคู่แข่ง</div></a>
+      <a class="card wide" href="assets/set2_clinic.png" target="_blank"><img src="assets/set2_clinic.png" alt="โปรไฟล์คลินิก" loading="lazy"><div class="cap">โปรไฟล์ธุรกิจบริการ — คลินิก</div></a>
+      <a class="card wide" href="assets/set4_fnb.png" target="_blank"><img src="assets/set4_fnb.png" alt="สไลด์ธุรกิจอาหาร" loading="lazy"><div class="cap">กราฟการเติบโต — ธุรกิจอาหาร</div></a>
     </div>
-  </section>
-
-  <section id="motion">
-    <div class="sec-head"><span class="no">03</span><h2>Motion Graphics — อธิบายสินค้าและข้อมูลให้จบในคลิปเดียว</h2></div>
-    <p class="sec-desc">explainer ภาพวาดเวกเตอร์เล่าเรื่อง พร้อมเสียงบรรยายและซับ
-       เหมาะกับสินค้า/บริการที่ต้องอธิบาย และเนื้อหาที่มีตัวเลขหรือขั้นตอน</p>
-    <div class="vid-row">
-      <div class="phone"><video src="assets/motion_tuen.mp4" controls preload="metadata" playsinline></video></div>
-      <div class="vid-notes">
-        <ul>
-          <li><strong>ตัวละคร/ฉากวาดใหม่ตามแบรนด์</strong> — ไม่ใช่เทมเพลตสำเร็จรูป</li>
-          <li><strong>เสียงบรรยายไทย + ซับ</strong> — ดูรู้เรื่องทั้งเปิดและปิดเสียง</li>
-          <li><strong>ได้ทั้งแนวตั้ง 9:16 และแนวนอน 16:9</strong></li>
-          <li><strong>สตอรี่บอร์ดให้ดูก่อนผลิตจริง</strong></li>
-        </ul>
-        <div class="sec-cta"><a class="btn btn-ghost" href="https://fastwork.co/user/709jqv5b/motion-graphics-13750849" target="_blank" rel="noopener">ดูแพ็กเกจงาน Motion →</a></div>
-      </div>
-    </div>
+    <div class="sec-cta"><a class="btn btn-ghost" href="https://fastwork.co/user/709jqv5b/presentation-32208593" target="_blank" rel="noopener">ดูแพ็กเกจงาน Presentation →</a></div>
   </section>
 
   <section id="infographic">
-    <div class="sec-head"><span class="no">04</span><h2>อินโฟกราฟิก — ข้อมูลแน่น อ่านรู้เรื่อง</h2></div>
+    <div class="sec-head"><span class="no">02</span><h2>อินโฟกราฟิก — ข้อมูลแน่น อ่านรู้เรื่อง</h2></div>
     <p class="sec-desc">ย่อยข้อมูลยาว ๆ ให้จบในภาพเดียว สำหรับธุรกิจ หน่วยงาน โรงเรียน และเพจ
        ทุกแพ็กเกจแถมไฟล์เวกเตอร์แก้ไขได้</p>
     <div class="grid cols3">
@@ -191,17 +192,67 @@
     <div class="sec-cta"><a class="btn btn-ghost" href="https://fastwork.co/user/709jqv5b/infographics-10463361" target="_blank" rel="noopener">ดูแพ็กเกจงานอินโฟกราฟิก →</a></div>
   </section>
 
-  <section id="presentation">
-    <div class="sec-head"><span class="no">05</span><h2>Company Profile / Pitch Deck — ให้ตัวเลขของคุณเล่าเรื่องได้</h2></div>
-    <p class="sec-desc">เอกสารธุรกิจที่ข้อมูลเยอะมักจบที่สไลด์อ่านไม่รู้เรื่อง
-       เราออกแบบกราฟและไดอะแกรมใหม่ให้อ่านจบเร็ว เหมาะกับงานยื่นลูกค้า ยื่นแบงก์ และพรีเซนต์ผู้บริหาร</p>
-    <div class="grid cols2">
-      <a class="card wide" href="assets/set1_siam_metalworks.png" target="_blank"><img src="assets/set1_siam_metalworks.png" alt="Company profile โรงงานโลหะ" loading="lazy"><div class="cap">Company Profile — โรงงานอุตสาหกรรม</div></a>
-      <a class="card wide" href="assets/set3_pitchdeck.png" target="_blank"><img src="assets/set3_pitchdeck.png" alt="Pitch deck" loading="lazy"><div class="cap">Pitch Deck — ตารางเทียบคู่แข่ง</div></a>
-      <a class="card wide" href="assets/set2_clinic.png" target="_blank"><img src="assets/set2_clinic.png" alt="โปรไฟล์คลินิก" loading="lazy"><div class="cap">โปรไฟล์ธุรกิจบริการ — คลินิก</div></a>
-      <a class="card wide" href="assets/set4_fnb.png" target="_blank"><img src="assets/set4_fnb.png" alt="สไลด์ธุรกิจอาหาร" loading="lazy"><div class="cap">กราฟการเติบโต — ธุรกิจอาหาร</div></a>
+  <section id="motion">
+    <div class="sec-head"><span class="no">03</span><h2>Motion Graphics — อธิบายสินค้าและข้อมูลให้จบในคลิปเดียว</h2></div>
+    <p class="sec-desc">explainer ภาพวาดเวกเตอร์เล่าเรื่อง พร้อมเสียงบรรยายและซับ
+       เหมาะกับสินค้า/บริการที่ต้องอธิบาย และเนื้อหาที่มีตัวเลขหรือขั้นตอน</p>
+    <div class="vid-row">
+      <div class="phone">
+        <video class="pv" src="assets/motion_tuen_preview.mp4" data-full="assets/motion_tuen.mp4" autoplay muted loop playsinline></video>
+        <button class="pv-btn" type="button">▶ ดูคลิปเต็มพร้อมเสียง</button>
+      </div>
+      <div class="vid-notes">
+        <ul>
+          <li><strong>ตัวละคร/ฉากวาดใหม่ตามแบรนด์</strong> — ไม่ใช่เทมเพลตสำเร็จรูป</li>
+          <li><strong>เสียงบรรยายไทย + ซับ</strong> — ดูรู้เรื่องทั้งเปิดและปิดเสียง</li>
+          <li><strong>ได้ทั้งแนวตั้ง 9:16 และแนวนอน 16:9</strong></li>
+          <li><strong>สตอรี่บอร์ดให้ดูก่อนผลิตจริง</strong></li>
+        </ul>
+        <div class="sec-cta"><a class="btn btn-ghost" href="https://fastwork.co/user/709jqv5b/motion-graphics-13750849" target="_blank" rel="noopener">ดูแพ็กเกจงาน Motion →</a></div>
+      </div>
     </div>
-    <div class="sec-cta"><a class="btn btn-ghost" href="https://fastwork.co/user/709jqv5b/presentation-32208593" target="_blank" rel="noopener">ดูแพ็กเกจงาน Presentation →</a></div>
+  </section>
+
+  <section id="reviewclip">
+    <div class="sec-head"><span class="no">04</span><h2>คลิปรีวิวลูกค้า — จากสกรีนช็อตแชท เป็นคลิปขายของ</h2></div>
+    <p class="sec-desc">ร้านค้าส่วนใหญ่มีคำชมลูกค้ากองอยู่ในแชทแต่ไม่เคยถูกใช้ต่อ
+       เรารับแปลงสกรีนช็อตรีวิวเป็นคลิปสั้นตรงจังหวะเพลง พร้อมเบลอชื่อ-หน้าลูกค้าให้ถ้ายังไม่ได้รับอนุญาต</p>
+    <div class="vid-row">
+      <div class="phone">
+        <video class="pv" src="assets/reviewclip_demo_preview.mp4" data-full="assets/reviewclip_demo.mp4" autoplay muted loop playsinline></video>
+        <button class="pv-btn" type="button">▶ ดูคลิปเต็มพร้อมเสียง</button>
+      </div>
+      <div class="vid-notes">
+        <ul>
+          <li><strong>คัตตรงจังหวะเพลง</strong> — เปลี่ยนภาพลงบีต ดูมีของแม้วัตถุดิบเป็นภาพนิ่ง</li>
+          <li><strong>ข้อความเด็ดถูกดึงขึ้นตัวใหญ่</strong> — คนดูจับใจความได้โดยไม่ต้องเปิดเสียง</li>
+          <li><strong>คุมโซนปลอดภัย TikTok</strong> — ไม่มีข้อความโดน UI บัง</li>
+          <li><strong>จบด้วยการ์ดชื่อร้าน</strong> — พร้อมใช้ยิงแอดต่อได้ทันที</li>
+        </ul>
+        <div class="sec-cta"><a class="btn btn-ghost" href="https://fastwork.co/user/709jqv5b/video-editing-64517126" target="_blank" rel="noopener">ดูแพ็กเกจงานคลิปรีวิว →</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="subtitle">
+    <div class="sec-head"><span class="no">05</span><h2>ซับไทยฝังในคลิป — เด้งตามคำ วรรณยุกต์ไม่เพี้ยน</h2></div>
+    <p class="sec-desc">ซับตามเสียงพูดแบบ word-pop เน้นคำสำคัญด้วยสี ตรวจทวนทุกบรรทัดด้วยคน
+       แถมไฟล์ .srt ให้เอาไปใช้ต่อทุกแพลตฟอร์ม</p>
+    <div class="vid-row">
+      <div class="phone">
+        <video class="pv" src="assets/subtitle_sample_preview.mp4" data-full="assets/subtitle_sample.mp4" autoplay muted loop playsinline></video>
+        <button class="pv-btn" type="button">▶ ดูคลิปเต็มพร้อมเสียง</button>
+      </div>
+      <div class="vid-notes">
+        <ul>
+          <li><strong>ซับเด้งตามคำที่กำลังพูด</strong> — ไม่ใช่ยกประโยคขึ้นทีเดียว</li>
+          <li><strong>วรรณยุกต์และสระไทยถูกตำแหน่งทุกตัว</strong> — จุดที่เครื่องมือสำเร็จรูปมักพลาด</li>
+          <li><strong>หนึ่งบรรทัดจบหนึ่งช่วงพูด</strong> — ไม่ตัดคำค้างท้ายบรรทัด</li>
+          <li><strong>ได้ทั้งคลิปฝังซับ + ไฟล์ .srt</strong></li>
+        </ul>
+        <div class="sec-cta"><a class="btn btn-ghost" href="https://fastwork.co/user/709jqv5b/subtitle-80531421" target="_blank" rel="noopener">ดูแพ็กเกจงานซับไทย →</a></div>
+      </div>
+    </div>
   </section>
 
   <section id="moodboard">
@@ -209,23 +260,23 @@
     <p class="sec-desc">บอร์ดกำหนดทิศทางดีไซน์ก่อนเริ่มโปรดักชัน — สวอตช์สี ฟอนต์ เท็กซ์เจอร์ และอารมณ์ภาพ
        คลิกเพื่อเปิดดูบอร์ดจริงแบบเต็มหน้า</p>
     <div class="mood">
-      <a href="https://claude.ai/code/artifact/896bef5f-24bf-412a-9e7c-519f7307528f" target="_blank" rel="noopener">
+      <a href="assets/mood_mcm.png" target="_blank" rel="noopener">
         <div class="sw"><i style="background:#d4a017"></i><i style="background:#c1440e"></i><i style="background:#708238"></i><i style="background:#2e8b8b"></i></div>
         <h3>Mid-Century Modern</h3><p>design reference board · ลาย atomic starburst</p>
       </a>
-      <a href="https://claude.ai/code/artifact/26a755a5-2d8b-4660-bfc7-5dcfdd4e6d53" target="_blank" rel="noopener">
+      <a href="assets/mood_engineer.png" target="_blank" rel="noopener">
         <div class="sw"><i style="background:#3a3f47"></i><i style="background:#19b6c9"></i><i style="background:#d9c18a"></i><i style="background:#12151a"></i></div>
         <h3>Showman Engineer</h3><p>design reference board · HUD + ลายวงจร</p>
       </a>
-      <a href="https://claude.ai/code/artifact/80817e1d-dc30-4953-9806-f36e97863781" target="_blank" rel="noopener">
+      <a href="assets/mood_athena.png" target="_blank" rel="noopener">
         <div class="sw"><i style="background:#e8e6e1"></i><i style="background:#1f6f8b"></i><i style="background:#5b6670"></i><i style="background:#708238"></i></div>
         <h3>Athena</h3><p>design reference board · หินอ่อน + ลาย meander</p>
       </a>
-      <a href="https://claude.ai/code/artifact/718ddc78-4b16-40a2-8fa8-8d22cf64fb4a" target="_blank" rel="noopener">
+      <a href="assets/mood_caesar.png" target="_blank" rel="noopener">
         <div class="sw"><i style="background:#5b2a86"></i><i style="background:#a4161a"></i><i style="background:#d4af37"></i><i style="background:#1b1b1e"></i></div>
         <h3>Julius Caesar</h3><p>design reference board · ลอเรล + อินทรี</p>
       </a>
-      <a href="https://claude.ai/code/artifact/f0db7fd8-f31f-4e15-8e82-a06a6a14879e" target="_blank" rel="noopener">
+      <a href="assets/mood_collage.png" target="_blank" rel="noopener">
         <div class="sw"><i style="background:#111"></i><i style="background:#333"></i><i style="background:#e8e6e1"></i><i style="background:#a4161a"></i></div>
         <h3>Caesar Collage</h3><p>inspiration collage · 13 ภาพซ้อนเล่าอารมณ์</p>
       </a>
@@ -241,6 +292,32 @@
   <p>รับงานและชำระเงินผ่าน Fastwork เท่านั้น — เงินของคุณได้รับความคุ้มครองจนกว่างานจะเสร็จ</p>
   <div class="actions"><a class="btn btn-primary" href="https://fastwork.co/user/709jqv5b" target="_blank" rel="noopener">ดูบริการทั้งหมดบน Fastwork</a></div>
 </footer>
+
+<script>
+  // คลิกปุ่มบนกรอบมือถือ → สลับจากพรีวิวเงียบเป็นคลิปเต็มพร้อมเสียง
+  document.querySelectorAll('.phone').forEach(function(box){
+    var v = box.querySelector('video.pv');
+    var btn = box.querySelector('.pv-btn');
+    if(!v || !btn) return;
+    btn.addEventListener('click', function(){
+      v.src = v.dataset.full;
+      v.muted = false; v.loop = false; v.controls = true; v.autoplay = true;
+      v.play();
+      btn.remove();
+    });
+  });
+  // ประหยัดแบตมือถือ: หยุดพรีวิวที่หลุดจากจอ
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        var v = e.target;
+        if(v.controls) return; // คลิปเต็มที่ผู้ใช้กดเอง ไม่ยุ่ง
+        if(e.isIntersecting){ v.play().catch(function(){}); } else { v.pause(); }
+      });
+    },{threshold:.15});
+    document.querySelectorAll('video[muted], video.pv').forEach(function(v){ io.observe(v); });
+  }
+</script>
 
 </body>
 </html>
