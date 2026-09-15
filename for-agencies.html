@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sanifu Studio — White-label visuals for agencies</title>
+<meta name="description" content="White-label AI-assisted product images and short explainer video, delivered under your agency's name. Send a brief, NDA first, written reply within 24 hours, no calls.">
+<link rel="canonical" href="https://sanifu-studio.github.io/for-agencies.html">
+<meta property="og:title" content="Sanifu Studio — White-label visuals for agencies">
+<meta property="og:description" content="Product image packs and short explainer video for agencies to hand to their own clients. NDA first. Written reply within 24h. No calls.">
+<meta property="og:image" content="https://sanifu-studio.github.io/assets/og.png">
+<meta property="og:type" content="website">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Prompt:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#0e1116;--panel:#161b23;--line:#2a3342;--text:#e8edf4;--muted:#9aa7b8;--accent:#3fb6a8;--accent2:#f5b942}
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--text);font-family:'IBM Plex Sans',system-ui,sans-serif;line-height:1.65}
+  h1,h2,h3,.logo{font-family:'Prompt','IBM Plex Sans',sans-serif}
+  a{color:inherit;text-decoration:none}
+  img,video{max-width:100%;display:block}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+  header{position:sticky;top:0;z-index:50;background:rgba(14,17,22,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;gap:18px;padding:14px 0;flex-wrap:wrap}
+  .logo{font-weight:800;font-size:1.25rem;letter-spacing:.5px}.logo span{color:var(--accent)}
+  .nav .links{display:flex;gap:14px;flex-wrap:wrap;font-size:.86rem;color:var(--muted)}.nav .links a:hover{color:var(--text)}
+  .nav .cta{margin-left:auto}
+  .btn{display:inline-block;padding:10px 20px;border-radius:10px;font-weight:600;font-size:.92rem;transition:.15s;border:0;cursor:pointer}
+  .btn-primary{background:var(--accent);color:#07211e;box-shadow:0 8px 22px -8px rgba(63,182,168,.5)}.btn-primary:hover{filter:brightness(1.1)}
+  .btn-ghost{border:1px solid var(--line);color:var(--text);background:transparent}.btn-ghost:hover{border-color:var(--accent);color:var(--accent)}
+  .hero{position:relative;padding:64px 0 44px;overflow:hidden}
+  .hero::before{content:"";position:absolute;z-index:0;border-radius:50%;filter:blur(70px);width:420px;height:420px;background:radial-gradient(circle,rgba(63,182,168,.22),transparent 70%);top:-160px;right:-120px;pointer-events:none}
+  .hero > *{position:relative;z-index:1}
+  .kicker{display:inline-flex;align-items:center;gap:8px;font-family:'Prompt';font-size:.78rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--accent2);margin-bottom:14px}
+  .kicker::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--accent2)}
+  .hero h1{font-size:clamp(2rem,5.2vw,3.2rem);font-weight:800;line-height:1.18;letter-spacing:-.01em}.hero h1 em{font-style:normal;color:var(--accent)}
+  .hero .sub{margin-top:18px;max-width:680px;color:var(--muted);font-size:1.05rem}
+  .hero .actions{margin-top:26px;display:flex;gap:12px;flex-wrap:wrap}
+  .chips{margin-top:26px;display:flex;gap:8px;flex-wrap:wrap}.chip{font-size:.8rem;color:var(--muted);border:1px solid var(--line);border-radius:99px;padding:5px 13px}
+  section{padding:56px 0;border-top:1px solid var(--line)}
+  .sec-head{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:8px}.sec-head .no{font-family:'Prompt';color:var(--accent2);font-weight:700;font-size:.95rem}
+  h2{font-size:clamp(1.25rem,3vw,1.7rem);font-weight:700}
+  .sec-desc{color:var(--muted);max-width:680px;margin-bottom:26px;font-size:.95rem}
+  .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px}
+  .step .num{width:38px;height:38px;border-radius:10px;background:var(--panel);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-family:'Prompt';font-weight:700;color:var(--accent);margin-bottom:14px}
+  .step h3{font-size:1rem;font-weight:600;margin-bottom:6px}.step p{font-size:.9rem;color:var(--muted)}
+  .two{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px}
+  .box{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:22px}
+  .box h3{font-size:1rem;margin-bottom:12px}.box ul{list-style:none;display:grid;gap:10px}
+  .box li{padding-left:24px;position:relative;color:var(--muted);font-size:.92rem}
+  .box.yes li::before{content:"✓";position:absolute;left:0;color:var(--accent);font-weight:700}
+  .box.no li::before{content:"–";position:absolute;left:0;color:var(--accent2);font-weight:700}
+  .grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+  .card img{width:100%;aspect-ratio:1/1;object-fit:cover}
+  .card.vid video{width:100%;aspect-ratio:16/9;object-fit:cover;background:#000}
+  .card .cap{padding:10px 14px;font-size:.82rem;color:var(--muted)}
+  .terms{display:grid;gap:12px;max-width:760px}
+  .terms li{list-style:none;padding-left:26px;position:relative;color:var(--muted);font-size:.95rem}
+  .terms li::before{content:"✓";position:absolute;left:0;color:var(--accent);font-weight:700}
+  .terms li strong{color:var(--text);font-weight:600}
+  .brief{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:26px;max-width:760px}
+  .brief ol{padding-left:22px;color:var(--muted);font-size:.93rem;display:grid;gap:6px}
+  .brief .actions{margin-top:22px;display:flex;gap:12px;flex-wrap:wrap}
+  .note{margin-top:22px;font-size:.8rem;color:var(--muted);border-left:3px solid var(--line);padding-left:12px;max-width:760px}
+  footer{border-top:1px solid var(--line);padding:48px 0 60px;text-align:center}footer p{color:var(--muted);margin-top:10px;font-size:.9rem}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="/">SANI<span>FU</span></a>
+    <nav class="links">
+      <a href="#how">How it works</a>
+      <a href="#scope">Scope</a>
+      <a href="#work">Work</a>
+      <a href="#terms">White-label terms</a>
+      <a href="/">Thai site</a>
+    </nav>
+    <div class="cta"><a class="btn btn-primary" href="#brief">Send a brief</a></div>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="hero">
+    <span class="kicker">For agencies</span>
+    <h1>White-label AI-assisted visuals,<br><em>delivered under your name.</em></h1>
+    <p class="sub">Sanifu Studio produces product images and short explainer video for agencies to hand to their own clients. You keep the client relationship, the branding and the credit. We never contact your client.</p>
+    <div class="actions">
+      <a class="btn btn-primary" href="#brief">Send a brief</a>
+      <a class="btn btn-ghost" href="#work">See the work ↓</a>
+    </div>
+    <div class="chips">
+      <span class="chip">NDA first</span><span class="chip">Written reply within 24h</span><span class="chip">No calls</span><span class="chip">Source files included</span>
+    </div>
+  </div>
+
+  <section id="how">
+    <div class="sec-head"><span class="no">01</span><h2>How it works</h2></div>
+    <div class="steps">
+      <div class="step"><div class="num">1</div><h3>Send a brief</h3><p>Deliverable, brand material and deadline. No call needed to get started.</p></div>
+      <div class="step"><div class="num">2</div><h3>NDA first</h3><p>We sign your NDA before any brief detail is discussed further. Confidentiality is the default.</p></div>
+      <div class="step"><div class="num">3</div><h3>Written reply within 24 hours</h3><p>Scope, timeline and price back in writing. No meeting required at any stage.</p></div>
+    </div>
+  </section>
+
+  <section id="scope">
+    <div class="sec-head"><span class="no">02</span><h2>Scope</h2></div>
+    <div class="two">
+      <div class="box yes"><h3>What we take</h3><ul>
+        <li>Product image packs for e-commerce listings, label, colour and proportion checked against source photos</li>
+        <li>Brand character or presenter sheets for one consistent face across campaigns</li>
+        <li>Short explainer video: script and storyboard approved before animation, English voice-over, subtitles</li>
+        <li>Overflow work when your internal team is at capacity</li>
+      </ul></div>
+      <div class="box no"><h3>What we don't take</h3><ul>
+        <li>Work that requires a live call before the brief is reviewed</li>
+        <li>Rush turnaround under 48 hours</li>
+        <li>Spec or pitch work without a signed brief and, where requested, a signed NDA</li>
+        <li>Live-action shoots. This is AI-assisted visual and video production, not on-location filming</li>
+      </ul></div>
+    </div>
+  </section>
+
+  <section id="work">
+    <div class="sec-head"><span class="no">03</span><h2>Work</h2></div>
+    <p class="sec-desc">Fictional brands, produced to the same checks we run on client work: label text verified against the source, one consistent product across the whole set, every frame reviewed before delivery.</p>
+    <div class="grid">
+      <div class="card"><img src="assets/prod_03.jpg" alt="Coffee bag product shot, kitchen lifestyle" loading="lazy"><div class="cap">Lifestyle, kitchen</div></div>
+      <div class="card"><img src="assets/prod_01.jpg" alt="Coffee bag product shot, white background" loading="lazy"><div class="cap">Listing hero, white background</div></div>
+      <div class="card"><img src="assets/prod_06.jpg" alt="Coffee bag held in hand" loading="lazy"><div class="cap">Scale shot, in hand</div></div>
+      <div class="card"><img src="assets/prod_05.jpg" alt="Coffee bag product shot, detail" loading="lazy"><div class="cap">Detail</div></div>
+      <div class="card"><img src="assets/prod_09.jpg" alt="Coffee bag product shot, styled" loading="lazy"><div class="cap">Styled</div></div>
+      <div class="card vid"><video src="assets/motion_invora_preview.mp4" autoplay muted loop playsinline></video><div class="cap">30s explainer, English VO, 16:9 and 9:16 delivered</div></div>
+    </div>
+  </section>
+
+  <section id="terms">
+    <div class="sec-head"><span class="no">04</span><h2>White-label terms</h2></div>
+    <ul class="terms">
+      <li><strong>Your name on it.</strong> No Sanifu Studio watermark or credit unless you ask for one.</li>
+      <li><strong>We never contact your client.</strong> All communication goes through you.</li>
+      <li><strong>Your retail price is yours.</strong> What we invoice you is separate and private between us. Wholesale runs roughly 50–60% of our direct retail price for the same deliverable.</li>
+      <li><strong>Source files included.</strong> Your team can make small edits without coming back to us.</li>
+      <li><strong>Turnaround, in writing per project.</strong> Image packs typically ship in 3 to 6 business days, short explainer video in 3 to 7.</li>
+    </ul>
+  </section>
+
+  <section id="brief">
+    <div class="sec-head"><span class="no">05</span><h2>Send a brief</h2></div>
+    <div class="brief">
+      <p class="sec-desc" style="margin-bottom:14px">Include these nine points and you will get a written scope, timeline and price within 24 hours.</p>
+      <ol>
+        <li>Agency name</li>
+        <li>Contact email</li>
+        <li>Project type: product image pack / character or presenter sheet / explainer video / other</li>
+        <li>Deliverable spec: quantity, aspect ratios or video length, target platform</li>
+        <li>Brand guidelines or reference material</li>
+        <li>Deadline</li>
+        <li>Budget range</li>
+        <li>Confirm: this is white-label work, Sanifu Studio will not contact your client directly</li>
+        <li>NDA needed before further detail? yes / no</li>
+      </ol>
+      <div class="actions">
+        <a class="btn btn-primary" href="https://www.upwork.com/services/product/2099747755231308561" target="_blank" rel="noopener">Send a brief via Upwork</a>
+      </div>
+    </div>
+    <p class="note">Payment through Upwork is escrow-protected for both sides. Direct invoicing is available for repeat agency work.</p>
+  </section>
+</main>
+
+<footer>
+  <div class="logo">SANI<span style="color:var(--accent)">FU</span></div>
+  <p>Sanifu Studio · Bangkok · AI-assisted visual production with human review on every frame</p>
+</footer>
+</body>
+</html>
