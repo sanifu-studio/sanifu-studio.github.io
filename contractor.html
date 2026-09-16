@@ -2,8 +2,8 @@
 <!--
   ลิงก์ในหน้านี้
   1) LINE : https://lin.ee/OHC6aVl  (ของจริงแล้ว · คีย์เวิร์ดคัดกรอง: "แปลน")
-  หน้านี้ไม่มีฟอร์ม Tally
-  หน้านี้ไม่มีราคาบนหน้าเว็บโดยเจตนา ราคาแจ้งในไลน์เท่านั้น
+  2) ฟอร์มส่งแปลน : https://tally.so/r/QKbGB8  (ของจริงแล้ว 16 ก.ย.)
+  ราคาแสดงบนหน้า ฿3,900 ต่อ 1 หลัง (เจ้าของเคาะ 16 ก.ย.)
   บล็อกตัวอย่างยังเป็นบล็อกว่างรอชิ้นงานจริง
 -->
 <html lang="th">
@@ -98,6 +98,16 @@
   .step h3{font-size:.98rem;font-weight:600;margin-bottom:4px}
   .step p{font-size:.87rem;color:var(--muted)}
 
+  .price{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:24px;max-width:620px}
+  .price .big{font-family:'Prompt';font-weight:800;font-size:2.4rem;color:var(--accent);line-height:1.1}
+  .price .unit{color:var(--muted);font-size:.9rem;margin-top:4px}
+  .price .anchor{margin-top:14px;font-size:.88rem;color:var(--muted);border-left:3px solid var(--accent2);padding-left:12px;line-height:1.6}
+  .price .anchor strong{color:var(--text);font-weight:600}
+  .price ul{list-style:none;display:grid;gap:9px;margin-top:18px}
+  .price li{padding-left:24px;position:relative;color:var(--muted);font-size:.93rem}
+  .price li::before{content:"✓";position:absolute;left:0;color:var(--accent);font-weight:700}
+  .price li strong{color:var(--text);font-weight:600}
+  .price .actions{margin-top:22px}
   .cta-band{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:26px 22px;max-width:680px}
   .cta-band h3{font-size:1.15rem;margin-bottom:10px}
   .cta-band p{color:var(--muted);font-size:.95rem}
@@ -129,6 +139,7 @@
       <a href="#bonus">ได้เพิ่ม</a>
       <a href="#addon">ตัวเลือกเสริม</a>
       <a href="#how">ขั้นตอน</a>
+      <a href="#price">ราคา</a>
       <a href="#faq">คำถามที่พบบ่อย</a>
     </nav>
     <div class="cta"><a class="btn btn-primary" href="https://lin.ee/OHC6aVl" target="_blank" rel="noopener">ทักไลน์ พิมพ์ว่า แปลน</a></div>
@@ -143,14 +154,14 @@
     <p class="sub">ส่งแปลน 1 หลังมา รูปถ่ายหน้ากระดาษก็ได้ ได้คลิปที่พาลูกค้าเดินดูบ้านหลังนั้นตั้งแต่ยังเป็นที่ดินเปล่า ตัด 3 ขนาดจากคลิปเดียว เปิดให้ดูตอนนั่งคุยโต๊ะเดียวกัน หรือส่งตามไปในแชทหลังลูกค้ากลับบ้านไปคิด</p>
     <div class="actions">
       <a class="btn btn-primary" href="https://lin.ee/OHC6aVl" target="_blank" rel="noopener">ส่งแปลน 1 หลังให้ดูก่อน</a>
-      <a class="btn btn-ghost" href="#what">ดูว่าได้อะไร ↓</a>
+      <a class="btn btn-ghost" href="https://tally.so/r/QKbGB8" target="_blank" rel="noopener">ส่งแปลนผ่านฟอร์ม</a>
     </div>
     <div class="chips">
       <span class="chip">รับแปลนเป็นรูปถ่ายหน้ากระดาษก็ได้</span>
       <span class="chip">3 ขนาดจากคลิปเดียว</span>
       <span class="chip">ส่งภายใน 3 วันทำการ</span>
       <span class="chip">แก้ได้ 1 รอบ</span>
-      <span class="chip">ราคาแจ้งในไลน์</span>
+      <span class="chip">฿3,900 ต่อ 1 หลัง</span>
     </div>
   </div>
 
@@ -247,26 +258,48 @@
     <div class="sec-head"><span class="no">06</span><h2>ขั้นตอนและเวลา</h2></div>
     <div class="steps">
       <div class="step"><div class="num">1</div><h3>ทักไลน์</h3><p>พิมพ์คำว่า แปลน แล้วตอบคำถามสั้น 2 ข้อ เพื่อส่งตัวอย่างให้ตรงงานคุณ</p></div>
-      <div class="step"><div class="num">2</div><h3>ส่งแปลน 1 หลัง</h3><p>ได้สตอรี่บอร์ดและราคาเป็นลายลักษณ์อักษรกลับไป ก่อนเริ่มผลิต</p></div>
+      <div class="step"><div class="num">2</div><h3>ส่งแปลน 1 หลัง</h3><p>ได้สตอรี่บอร์ดและขอบเขตงานเป็นลายลักษณ์อักษรกลับไป ก่อนเริ่มผลิต</p></div>
       <div class="step"><div class="num">3</div><h3>ผลิต</h3><p>ส่งคลิปภายใน 3 วันทำการ นับจากวันที่อนุมัติสตอรี่บอร์ด</p></div>
       <div class="step"><div class="num">4</div><h3>แก้ 1 รอบ</h3><p>รวบจุดที่อยากปรับมาครั้งเดียว แก้กลับภายใน 2 วันทำการ จุดที่ไม่ตรงแปลนแก้ให้จนทีมขายยอมรับ ภายใน 2 รอบ ไม่คิดเพิ่ม</p></div>
     </div>
-    <p class="note">ราคาไม่ประกาศบนหน้านี้เพราะขึ้นกับจำนวนหลัง ความละเอียดของแปลน และตัวเลือกเสริมที่เลือก แจ้งราคาเป็นลายลักษณ์อักษรในไลน์ก่อนเริ่มงานทุกครั้ง</p>
+    <p class="note">ราคาชุดมาตรฐาน ฿3,900 ต่อ 1 หลัง ถ้าทำหลายหลังหรือเลือกตัวเลือกเสริม จะสรุปยอดรวมเป็นลายลักษณ์อักษรในไลน์ก่อนเริ่มงานทุกครั้ง</p>
+  </section>
+
+  <section id="price">
+    <div class="sec-head"><span class="no">07</span><h2>ราคา</h2></div>
+    <div class="price">
+      <div class="big">฿3,900</div>
+      <div class="unit">ต่อ 1 หลัง · ชุดปิดการขายครบชุด จ่ายครั้งเดียว</div>
+      <p class="anchor">บน Fastwork คลิป 3D บ้าน 15–30 วินาที ไฟล์เดียว เริ่ม <strong>฿5,000</strong> · ภาพนิ่งอย่างเดียว <strong>฿2,500</strong> · ที่นี่ <strong>฿3,900</strong> ได้ทั้งคลิป 3 ขนาดและภาพนิ่ง 3 ใบ</p>
+      <ul>
+        <li><strong>รวมแล้ว</strong> คลิป 20 ถึง 30 วินาที จากที่ดินเปล่าไปเป็นบ้านหลังเสร็จ</li>
+        <li><strong>รวมแล้ว</strong> ตัด 3 ขนาด แนวตั้ง 9:16 แนวนอน 16:9 และภาพนิ่ง 3 ใบ</li>
+        <li><strong>รวมแล้ว</strong> สตอรี่บอร์ดก่อนผลิต และแก้ไข 1 รอบ</li>
+        <li><strong>รับประกัน</strong> แก้ให้ตรงแบบจนทีมขายยอมรับ ภายใน 2 รอบ ไม่คิดเพิ่ม</li>
+        <li><strong>ตัวเลือกเสริม</strong> ตารางการเงินจากราคาที่คุณแจ้ง (ไม่ประเมินราคาก่อสร้างให้) แจ้งราคาเสริมในไลน์</li>
+        <li><strong>หลายหลังพร้อมกัน</strong> แจ้งจำนวนในไลน์ จะเสนอราคาต่อชุดให้</li>
+      </ul>
+      <div class="actions">
+        <a class="btn btn-primary" href="https://lin.ee/OHC6aVl" target="_blank" rel="noopener">ทักไลน์ พิมพ์ว่า แปลน</a>
+        <a class="btn btn-ghost" href="https://tally.so/r/QKbGB8" target="_blank" rel="noopener">ส่งแปลนผ่านฟอร์ม</a>
+      </div>
+    </div>
   </section>
 
   <section id="contact">
-    <div class="sec-head"><span class="no">07</span><h2>เริ่มต้น</h2></div>
+    <div class="sec-head"><span class="no">08</span><h2>เริ่มต้น</h2></div>
     <div class="cta-band">
       <h3>ทักไลน์ พร้อมพิมพ์คำว่า <span class="kw">แปลน</span></h3>
       <p>คำนี้ช่วยแยกข้อความของคุณออกจากคิวอื่น จะได้ตอบเรื่องงานรับสร้างบ้านโดยตรง ตอบกลับภายใน 2 ชั่วโมงในเวลาทำการ</p>
       <div class="actions">
         <a class="btn btn-primary" href="https://lin.ee/OHC6aVl" target="_blank" rel="noopener">เปิดไลน์และพิมพ์ว่า แปลน</a>
+        <a class="btn btn-ghost" href="https://tally.so/r/QKbGB8" target="_blank" rel="noopener">ส่งแปลนผ่านฟอร์ม</a>
       </div>
     </div>
   </section>
 
   <section id="faq">
-    <div class="sec-head"><span class="no">08</span><h2>คำถามที่พบบ่อย</h2></div>
+    <div class="sec-head"><span class="no">09</span><h2>คำถามที่พบบ่อย</h2></div>
     <div class="faq">
       <details><summary>แปลนต้องละเอียดแค่ไหน</summary>
         <p>ขอแค่เห็นผังพื้นพร้อมขนาดห้อง จำนวนชั้น และรูปด้านอย่างน้อย 1 ด้าน ถ่ายรูปหน้ากระดาษจากมือถือส่งมาได้ ถ้ามีแค่ผังพื้นก็ทำได้ แต่จะถามเรื่องความสูงฝ้า รูปทรงหลังคา และวัสดุภายนอกเพิ่ม เพราะสามอย่างนี้เปลี่ยนหน้าตาบ้านมากที่สุด</p></details>
@@ -279,7 +312,7 @@
       <details><summary>เราขายเองอยู่แล้ว ทำไมต้องใช้ของข้างนอก</summary>
         <p>ของนี้เป็นเครื่องมือให้ทีมขายของคุณ ไม่ใช่การรับขายแทน เราไม่ติดต่อลูกค้าปลายทางของคุณ ไม่ใส่ชื่อเราในคลิป และไม่เอาแปลนของคุณไปใช้เป็นตัวอย่างงาน ยกเว้นคุณอนุญาตเป็นลายลักษณ์อักษร</p></details>
       <details><summary>ราคาเท่าไร</summary>
-        <p>แจ้งในไลน์ ขึ้นกับจำนวนหลัง ความละเอียดของแปลนที่ส่งมา และเลือกตัวเลือกเสริมหรือไม่ ทักมาพร้อมคำว่า แปลน จะตอบเป็นตัวเลขและขอบเขตงานเป็นลายลักษณ์อักษรให้ครบในข้อความเดียว</p></details>
+        <p>฿3,900 ต่อ 1 หลัง รวมคลิป 20 ถึง 30 วินาที ตัด 3 ขนาด ภาพนิ่ง 3 ใบ และแก้ให้ตรงแบบภายใน 2 รอบ ถ้าทำหลายหลังหรือเพิ่มตารางการเงิน ทักมาพร้อมคำว่า แปลน จะสรุปยอดรวมและขอบเขตงานเป็นลายลักษณ์อักษรให้ครบในข้อความเดียว</p></details>
     </div>
   </section>
 
