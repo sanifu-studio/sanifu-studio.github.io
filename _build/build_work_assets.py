@@ -74,3 +74,13 @@ print('ok', len(os.listdir(OUT)))
 im = P('40_jobs/practice/p06_photo_retouch/review/r3_A2_pair.jpg').convert('RGB')
 for n, box in [('ba_before', (0, 0, 1600, 1067)), ('ba_after', (0, 1073, 1600, 2140))]:
     c = im.crop(box); c.thumbnail((1200, 1200)); c.save(os.path.join(OUT, n + '.jpg'), quality=82, optimize=True, progressive=True)
+
+# การ์ดเคลื่อนไหวก่อน/หลัง 4:5 (ใช้ภาพชุดเดียวกับตัวเลื่อน)
+for n in ('ba_before', 'ba_after'):
+    thumb(Image.open(os.path.join(OUT, n + '.jpg')), n + '_45', 0.5)
+
+# ภาพยาวสำหรับการ์ดที่เลื่อนดูทั้งชิ้นเอง (เมนู อินโฟ)
+for n, src in [('menu_ushi_tall', os.path.join(FW, '40_jobs/jobboard/offer_2026-10-13/menu_9f7422a5/out/menu_A4.jpg')),
+               ('info_01_tall', os.path.join(ROOT, 'assets', 'info_01.png'))]:
+    im = Image.open(src).convert('RGB'); h = int(im.height * TW / im.width)
+    im.resize((TW, h), Image.LANCZOS).save(os.path.join(OUT, n + '.jpg'), quality=80, optimize=True, progressive=True)

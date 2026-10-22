@@ -100,6 +100,27 @@
   footer .row{display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between}
   footer img{height:24px;width:auto}
   footer p{font-size:.8rem;color:var(--muted);margin-top:14px;max-width:760px}
+
+  /* จังหวะเปิดหน้า: ข้อความและการ์ดไล่ขึ้นทีละชิ้น */
+  .rise{animation:rise .7s cubic-bezier(.2,.7,.2,1) var(--d,0s) both}
+  @keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+  .media{overflow:hidden}
+  .media img{transition:transform .5s ease}
+  @media (hover:hover){.card:hover .media img{transform:scale(1.035)}}
+  /* การ์ดที่เลื่อนดูทั้งชิ้นเอง */
+  .pan img{object-position:50% 0;animation:pan 9s ease-in-out 1.6s infinite alternate}
+  @keyframes pan{0%,12%{object-position:50% 0;transform:scale(1)}88%,100%{object-position:50% 100%;transform:scale(1.06)}}
+  /* การ์ดก่อน/หลังเลื่อนเอง */
+  .wipe img{position:absolute;inset:0}
+  .wipe .top{clip-path:inset(0 0 0 0);animation:wipe 6s ease-in-out 1.2s infinite}
+  .wipe-line{position:absolute;top:0;bottom:0;left:100%;width:2px;margin-left:-1px;background:#fff;box-shadow:0 0 0 1px rgba(0,0,0,.2);animation:wipeline 6s ease-in-out 1.2s infinite}
+  @keyframes wipe{0%,15%{clip-path:inset(0 0 0 0)}45%,65%{clip-path:inset(0 100% 0 0)}95%,100%{clip-path:inset(0 0 0 0)}}
+  @keyframes wipeline{0%,15%{left:100%}45%,65%{left:0%}95%,100%{left:100%}}
+  @media (prefers-reduced-motion:reduce){
+    .rise{animation:none}
+    .pan img,.wipe .top,.wipe-line{animation:none}
+    .media img{transition:none}
+  }
 </style>
 </head>
 <body>
@@ -113,12 +134,12 @@
 
 <main class="wrap">
   <div class="intro">
-    <h1><span class="nw">งานออกแบบและคลิปสั้น</span> <span class="nw">สำหรับร้านค้าและธุรกิจ</span><br><span class="nw">ส่งไฟล์ที่แก้ต่อได้ทุกงาน</span></h1>
-    <p class="proof"><span class="star">★</span> 5.0 จาก <a href="https://fastwork.co/user/709jqv5b" target="_blank" rel="noopener">6 รีวิวบน Fastwork</a> จ้างแล้ว 5 ครั้ง</p>
-    <p class="quote">“สุภาพ ทำงานดี ทำงานไว ติดต่อง่ายมาก” <span>ผู้จ้างบน Fastwork</span></p>
+    <h1 class="rise" style="--d:.05s"><span class="nw">งานออกแบบและคลิปสั้น</span> <span class="nw">สำหรับร้านค้าและธุรกิจ</span><br><span class="nw">ส่งไฟล์ที่แก้ต่อได้ทุกงาน</span></h1>
+    <p class="proof rise" style="--d:.25s"><span class="star">★</span> 5.0 จาก <a href="https://fastwork.co/user/709jqv5b" target="_blank" rel="noopener">6 รีวิวบน Fastwork</a> จ้างแล้ว 5 ครั้ง</p>
+    <p class="quote rise" style="--d:.35s">“สุภาพ ทำงานดี ทำงานไว ติดต่อง่ายมาก” <span>ผู้จ้างบน Fastwork</span></p>
   </div>
 
-  <div class="filters" id="filters">
+  <div class="filters rise" id="filters" style="--d:.45s">
     <div class="chips" role="toolbar" aria-label="เลือกประเภทงาน">
       <button data-f="all" aria-pressed="true">ทั้งหมด</button>
       <button data-f="print" aria-pressed="false">เมนู งานพิมพ์</button>
@@ -132,14 +153,15 @@
   </div>
 
   <div class="grid" id="work">
-    <a class="card" data-cat="print" href="assets/w/menu_ushi_full.jpg" target="_blank"><div class="media"><img src="assets/w/menu_ushi.jpg" width="640" height="800" alt="เมนูร้านสเต็ก A4"></div><div class="cap"><p class="biz">ร้านสเต็ก</p><p class="what"><span class="nw">เมนู</span> <span class="nw">A4</span> <span class="nw">ไฟล์พร้อม</span> <span class="nw">ส่งโรงพิมพ์</span></p></div></a>
-    <a class="card" data-cat="retouch" href="assets/w/retouch_event_full.jpg" target="_blank"><div class="media"><img src="assets/w/retouch_event.jpg" width="640" height="800" alt="รีทัชภาพงานอีเวนต์ก่อนและหลัง"></div><div class="cap"><p class="biz">งานอีเวนต์</p><p class="what"><span class="nw">แก้ภาพย้อนแสง</span> <span class="nw">และไฟเหลือง</span></p></div></a>
-    <a class="card" data-cat="print" href="assets/w/poster_cafe_full.jpg" target="_blank"><div class="media"><img src="assets/w/poster_cafe.jpg" width="640" height="800" alt="โปสเตอร์ร้านกาแฟเปิดสาขา"></div><div class="cap"><p class="biz">ร้านกาแฟ</p><p class="what"><span class="nw">โปสเตอร์เปิดสาขา</span></p></div></a>
-    <a class="card" data-cat="product" href="assets/w/pack_nuan_full.jpg" target="_blank"><div class="media"><img src="assets/w/pack_nuan.jpg" width="640" height="800" alt="แพ็กเกจสกินแคร์ทั้งชุด"></div><div class="cap"><p class="biz">สกินแคร์</p><p class="what"><span class="nw">ฉลาก</span> <span class="nw">กล่อง</span> <span class="nw">ขวด</span> <span class="nw">ทั้งชุด</span></p></div></a>
-    <a class="card" data-cat="retouch" href="assets/w/retouch_cake_full.jpg" target="_blank"><div class="media"><img src="assets/w/retouch_cake.jpg" width="640" height="800" alt="ไดคัทเค้กพื้นขาว ก่อนและหลัง"></div><div class="cap"><p class="biz">ร้านเบเกอรี่</p><p class="what"><span class="nw">ไดคัทพื้นขาว</span> <span class="nw">ลงร้านออนไลน์</span></p></div></a>
-    <a class="card" data-cat="infographic" href="assets/info_01.pdf" target="_blank"><div class="media"><img src="assets/w/info_01.jpg" width="640" height="800" alt="อินโฟกราฟิกขั้นตอนการผลิตกาแฟ"></div><div class="cap"><p class="biz">ร้านกาแฟ</p><p class="what"><span class="nw">อินโฟกราฟิก</span> <span class="nw">ขั้นตอนการผลิต</span></p></div></a>
-    <a class="card" data-cat="print" href="assets/w/poster_wine_full.jpg" target="_blank"><div class="media"><img src="assets/w/poster_wine.jpg" width="640" height="800" alt="โปสเตอร์ดินเนอร์ไวน์"></div><div class="cap"><p class="biz">โรงแรม</p><p class="what"><span class="nw">โปสเตอร์ดินเนอร์ไวน์</span></p></div></a>
-    <a class="card" data-cat="video" href="assets/edit_postprod_ba.mp4" target="_blank"><div class="media"><img src="assets/w/v_edit_postprod_ba.jpg" width="640" height="800" alt="คลิปก่อนและหลังตัดต่อ"><video muted loop playsinline preload="none" data-src="assets/edit_postprod_ba_preview.mp4"></video><span class="badge">▶ 23 วิ</span></div><div class="cap"><p class="biz">ร้านอาหารริมทาง</p><p class="what"><span class="nw">ก่อน/หลังตัดต่อ</span> <span class="nw">ปรับสี</span> <span class="nw">เสียง</span> <span class="nw">ข้อความ</span></p></div></a>
+    <a class="card rise" style="--d:0.50s" data-cat="print" href="assets/w/menu_ushi_full.jpg" target="_blank"><div class="media pan"><img src="assets/w/menu_ushi_tall.jpg" width="640" height="905" alt="เมนูร้านสเต็ก A4"></div><div class="cap"><p class="biz">ร้านสเต็ก</p><p class="what"><span class="nw">เมนู</span> <span class="nw">A4</span> <span class="nw">ไฟล์พร้อม</span> <span class="nw">ส่งโรงพิมพ์</span></p></div></a>
+    <a class="card rise" style="--d:0.57s" data-cat="retouch" href="#beforeafter"><div class="media wipe"><img src="assets/w/ba_after_45.jpg" width="640" height="800" alt="ภาพในร้านหลังปรับแสง"><img class="top" src="assets/w/ba_before_45.jpg" width="640" height="800" alt="ภาพในร้านก่อนปรับแสง"><span class="wipe-line"></span><span class="badge">ก่อน → หลัง</span></div><div class="cap"><p class="biz">ร้านอาหาร</p><p class="what"><span class="nw">ภาพในร้านมืด</span> <span class="nw">ปรับให้สว่าง</span></p></div></a>
+    <a class="card rise" style="--d:0.64s" data-cat="print" href="assets/w/poster_cafe_full.jpg" target="_blank"><div class="media"><img src="assets/w/poster_cafe.jpg" width="640" height="800" alt="โปสเตอร์ร้านกาแฟเปิดสาขา"></div><div class="cap"><p class="biz">ร้านกาแฟ</p><p class="what"><span class="nw">โปสเตอร์เปิดสาขา</span></p></div></a>
+    <a class="card rise" style="--d:0.71s" data-cat="video" href="assets/edit_postprod_ba.mp4" target="_blank"><div class="media"><img src="assets/w/v_edit_postprod_ba.jpg" width="640" height="800" alt="คลิปก่อนและหลังตัดต่อ"><video muted loop playsinline preload="none" data-src="assets/edit_postprod_ba_preview.mp4"></video><span class="badge">▶ 23 วิ</span></div><div class="cap"><p class="biz">ร้านอาหารริมทาง</p><p class="what"><span class="nw">ก่อน/หลังตัดต่อ</span> <span class="nw">ปรับสี</span> <span class="nw">เสียง</span> <span class="nw">ข้อความ</span></p></div></a>
+    <a class="card rise" style="--d:0.78s" data-cat="product" href="assets/w/pack_nuan_full.jpg" target="_blank"><div class="media"><img src="assets/w/pack_nuan.jpg" width="640" height="800" alt="แพ็กเกจสกินแคร์ทั้งชุด"></div><div class="cap"><p class="biz">สกินแคร์</p><p class="what"><span class="nw">ฉลาก</span> <span class="nw">กล่อง</span> <span class="nw">ขวด</span> <span class="nw">ทั้งชุด</span></p></div></a>
+    <a class="card rise" style="--d:0.85s" data-cat="infographic" href="assets/info_01.pdf" target="_blank"><div class="media pan"><img src="assets/w/info_01_tall.jpg" width="640" height="960" alt="อินโฟกราฟิกขั้นตอนการผลิตกาแฟ"></div><div class="cap"><p class="biz">ร้านกาแฟ</p><p class="what"><span class="nw">อินโฟกราฟิก</span> <span class="nw">ขั้นตอนการผลิต</span></p></div></a>
+    <a class="card rise" style="--d:0.92s" data-cat="retouch" href="assets/w/retouch_cake_full.jpg" target="_blank"><div class="media"><img src="assets/w/retouch_cake.jpg" width="640" height="800" alt="ไดคัทเค้กพื้นขาว ก่อนและหลัง"></div><div class="cap"><p class="biz">ร้านเบเกอรี่</p><p class="what"><span class="nw">ไดคัทพื้นขาว</span> <span class="nw">ลงร้านออนไลน์</span></p></div></a>
+    <a class="card rise" style="--d:0.99s" data-cat="print" href="assets/w/poster_wine_full.jpg" target="_blank"><div class="media"><img src="assets/w/poster_wine.jpg" width="640" height="800" alt="โปสเตอร์ดินเนอร์ไวน์"></div><div class="cap"><p class="biz">โรงแรม</p><p class="what"><span class="nw">โปสเตอร์ดินเนอร์ไวน์</span></p></div></a>
+    <a class="card" data-cat="retouch" href="assets/w/retouch_event_full.jpg" target="_blank"><div class="media"><img loading="lazy" src="assets/w/retouch_event.jpg" width="640" height="800" alt="รีทัชภาพงานอีเวนต์ก่อนและหลัง"></div><div class="cap"><p class="biz">งานอีเวนต์</p><p class="what"><span class="nw">แก้ภาพย้อนแสง</span> <span class="nw">และไฟเหลือง</span></p></div></a>
     <a class="card" data-cat="presentation" href="assets/cp_siam.pdf" target="_blank"><div class="media"><img loading="lazy" src="assets/w/iso_siam.jpg" width="640" height="800" alt="Company Profile โรงงาน"></div><div class="cap"><p class="biz">โรงงานอุตสาหกรรม</p><p class="what"><span class="nw">Company</span> <span class="nw">Profile</span> <span class="nw">10</span> <span class="nw">หน้า</span> <span class="nw">แก้ใน</span> <span class="nw">PowerPoint</span> <span class="nw">ได้</span></p></div></a>
     <a class="card" data-cat="retouch" href="assets/w/retouch_food_full.jpg" target="_blank"><div class="media"><img loading="lazy" src="assets/w/retouch_food.jpg" width="640" height="800" alt="ปรับสีภาพอาหาร ก่อนและหลัง"></div><div class="cap"><p class="biz">ร้านอาหาร</p><p class="what"><span class="nw">ปรับสีภาพอาหาร</span> <span class="nw">ให้น่ากิน</span></p></div></a>
     <a class="card" data-cat="product" href="assets/w/product_tuen_full.jpg" target="_blank"><div class="media"><img loading="lazy" src="assets/w/product_tuen.jpg" width="640" height="800" alt="ภาพสินค้าถุงกาแฟ"></div><div class="cap"><p class="biz">ร้านกาแฟ</p><p class="what"><span class="nw">ภาพสินค้า</span> <span class="nw">10</span> <span class="nw">ภาพ</span> <span class="nw">3</span> <span class="nw">ขนาด</span> <span class="nw">ลงร้านออนไลน์</span></p></div></a>
@@ -147,7 +169,6 @@
     <a class="card" data-cat="print" href="assets/w/nametent_full.jpg" target="_blank"><div class="media"><img loading="lazy" src="assets/w/nametent.jpg" width="640" height="800" alt="ป้ายชื่อตั้งโต๊ะ"></div><div class="cap"><p class="biz">งานสัมมนา</p><p class="what"><span class="nw">ป้ายชื่อตั้งโต๊ะ</span> <span class="nw">ไฟล์</span> <span class="nw">A4</span> <span class="nw">พับได้</span></p></div></a>
     <a class="card" data-cat="infographic" href="assets/info_04.pdf" target="_blank"><div class="media"><img loading="lazy" src="assets/w/info_04.jpg" width="640" height="800" alt="อินโฟกราฟิกเทียบช่องทางขาย"></div><div class="cap"><p class="biz">ร้านอาหาร</p><p class="what"><span class="nw">อินโฟกราฟิก</span> <span class="nw">เทียบช่องทางขาย</span></p></div></a>
     <a class="card" data-cat="video" href="assets/reel_fashion.mp4" target="_blank"><div class="media"><img loading="lazy" src="assets/w/v_reel_fashion.jpg" width="640" height="800" alt="รีลแบรนด์เสื้อผ้า"><video muted loop playsinline preload="none" data-src="assets/reel_fashion_preview.mp4"></video><span class="badge">▶ 25 วิ</span></div><div class="cap"><p class="biz">แบรนด์เสื้อผ้า</p><p class="what"><span class="nw">รีลแนวตั้ง</span> <span class="nw">สำหรับ</span> <span class="nw">TikTok</span> <span class="nw">และ</span> <span class="nw">Reels</span></p></div></a>
-    <a class="card" data-cat="retouch" href="assets/w/retouch_dark_full.jpg" target="_blank"><div class="media"><img loading="lazy" src="assets/w/retouch_dark.jpg" width="640" height="800" alt="ภาพในร้านมืด ปรับให้สว่าง"></div><div class="cap"><p class="biz">ร้านอาหาร</p><p class="what"><span class="nw">ภาพในร้านมืด</span> <span class="nw">ปรับให้สว่าง</span></p></div></a>
     <a class="card" data-cat="presentation" href="assets/pitch_horapa.pdf" target="_blank"><div class="media"><img loading="lazy" src="assets/w/iso_horapa.jpg" width="640" height="800" alt="Pitch Deck สตาร์ทอัพ"></div><div class="cap"><p class="biz">สตาร์ทอัพ</p><p class="what"><span class="nw">Pitch</span> <span class="nw">Deck</span> <span class="nw">ระดมทุน</span> <span class="nw">12</span> <span class="nw">หน้า</span></p></div></a>
     <a class="card" data-cat="video" href="assets/review_classy.mp4" target="_blank"><div class="media"><img loading="lazy" src="assets/w/v_review_classy.jpg" width="640" height="800" alt="คลิปรีวิวร้านค้า"><video muted loop playsinline preload="none" data-src="assets/review_classy_preview.mp4"></video><span class="badge">▶ 20 วิ</span></div><div class="cap"><p class="biz">ร้านค้าออนไลน์</p><p class="what"><span class="nw">คลิปรีวิวจากภาพนิ่ง</span> <span class="nw">ตัดตามจังหวะเพลง</span></p></div></a>
     <a class="card" data-cat="product" href="assets/w/pack_nuan_box_full.jpg" target="_blank"><div class="media"><img loading="lazy" src="assets/w/pack_nuan_box.jpg" width="640" height="800" alt="กล่องและขวดหยดสกินแคร์"></div><div class="cap"><p class="biz">สกินแคร์</p><p class="what"><span class="nw">กล่องและขวดหยด</span> <span class="nw">ไฟล์ไดคัท</span> <span class="nw">พร้อมพิมพ์</span></p></div></a>
@@ -254,6 +275,7 @@
     },{threshold:[0,.6]});
     vids.forEach(function(v){io.observe(v)});
   }
+
 
   var ba=document.getElementById('ba');
   if(ba){var r=ba.querySelector('input');r.addEventListener('input',function(){ba.style.setProperty('--x',r.value+'%')})}
